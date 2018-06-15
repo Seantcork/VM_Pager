@@ -1,0 +1,12 @@
+#include "vm_app.h"
+//test to see if syslog is working in the most basic of ways
+//straight out of the project write up!
+int main() {
+	char* p;
+	p = (char*) vm_extend();
+	p[0] = 'h';
+	p[1] = 'e';
+	p[2] = 'l';
+	p[3] = 'p';
+	vm_syslog(p, 0);
+}
